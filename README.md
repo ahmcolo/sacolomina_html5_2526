@@ -24,6 +24,54 @@ To run this project locally, follow these steps:
    ```
    npm start
    ```
+# Connection for contributors
+Method1, use git SSH and verify with username and password.
+Method2, use git HTTPS and verify with username and password. (To use this reccur to the PAT method)
+
+Method 1
+To connect to the repository using SSH, follow these steps:
+
+1. Generate an SSH key pair:
+   ```
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+   ```
+
+2. Copy your SSH public key:
+(copy the entire text that starts with ssh-ed25519)
+   ```
+   cat ~/.ssh/id_ed25519.pub
+   ```
+
+3. Add the SSH key to your GitHub account:
+Go to your GitHub Settings > SSH and GPG keys > New SSH key.
+Paste your key and save it.
+
+4. Clone the repository using SSH:
+   ```
+   git remote set-url origin git@github.com:<span style="color: red">yourusername</span>/sacolomina_html5_2526.git
+   ```
+or with 
+   ```
+   git clone git@github.com:<span style="color: red">yourusername</span>/sacolomina_html5_2526.git
+   ```
+
+Method 2
+
+To connect to the repository using HTTPS, follow these steps:
+
+1. Clone the repository using HTTPS:
+   ```
+   git clone https://github.com/<span style="color: red">yourusername</span>/sacolomina_html5_2526.git
+   ```
+Now generate PAT key on github following these steps 
+1. Go to your GitHub account settings.
+2. Click on "Developer settings" in the left sidebar.
+3. Click on "Personal access tokens" in the left sidebar.
+4. Click on "Generate new token".
+5. Give your token a descriptive name and select the appropriate scopes.
+6. Click on "Generate token".
+7. Copy the token and save it somewhere safe.
+When git asks for user and pass use your github user with the your PAT token as password.
 
 # Usage
 Once the development server is running, you can access the mini store by opening your web browser and navigating to `http://localhost:3000`.
