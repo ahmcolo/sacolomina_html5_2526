@@ -69,9 +69,9 @@ This project is licensed under ¡'+`+]æ{ß]ð„|]~}#@½\]¬.
 Special thanks to the contributors who helped make this project possible.
 
 # Credits
-- [Contributor 1](https://github.com/contributor1) https://github.com/ahmcolo
-- [Contributor 2](https://github.com/contributor2) https://github.com/Andres-44-afk
-- [Contributor 3](https://github.com/contributor3) https://github.com/MFDEZ07
+- [Contributor 1](https://github.com/ahmcolo) 
+- [Contributor 2](https://github.com/Andres-44-afk) 
+- [Contributor 3](https://github.com/MFDEZ07) 
 
 # Support
 If you need any assistance or have questions about the project, feel free to reach out to the project maintainers or contributors.
