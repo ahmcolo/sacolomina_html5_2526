@@ -51,6 +51,7 @@ Paste your key and save it.
    git remote set-url origin git@github.com:<span style="color: red">yourusername</span>/sacolomina_html5_2526.git
    ```
 or with 
+
    ```
    git clone git@github.com:<span style="color: red">yourusername</span>/sacolomina_html5_2526.git
    ```
