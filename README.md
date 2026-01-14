@@ -61,17 +61,15 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 # License
 This project is licensed under ¡'+`+]æ{ß]ð„|]~}#@½\]¬.
 
-........................................................................................................................................................
----------------------------------------------------------------------------------------------------------------------------------------------------------
----...------...------...------...------...------...------...------...------...------...------...------...------...------...------...------...------...---
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 # Acknowledgments
 Special thanks to the contributors who helped make this project possible.
 
 # Credits
-- [Contributor 1](https://github.com/ahmcolo) 
-- [Contributor 2](https://github.com/Andres-44-afk) 
-- [Contributor 3](https://github.com/MFDEZ07) 
+- [Contributor 1](https://github.com/ahmcolo) - Marvin
+- [Contributor 2](https://github.com/Andres-44-afk) - Andres
+- [Contributor 3](https://github.com/MFDEZ07) - Marc
 
 # Support
 If you need any assistance or have questions about the project, feel free to reach out to the project maintainers or contributors.
