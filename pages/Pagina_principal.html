@@ -32,31 +32,131 @@
             text-align: center;
             margin: 50px 0;
         }
+        .product-set {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        
+        .product {
+            background-color: white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .product-header {
+            background-color: #27ae60;
+            color: black;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .product-body {
+            padding: 20px;
+            flex: 1;
+        }
+        img{
+            display: flex;
+            position: relative;
+            
+        }
+        
+        .product-footer {
+            background-color: #27ae60;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        .product-footer h4 {
+            color: black;
+            font-size: 14px;
+        }
+    </style>
+
     </style>
 </head>
 <body>
+    
     <div class="header">
         <ul>
             <a href="#">Privacidad</a>
         </ul>
         <ul>
-            <a href="#">Sobre Nosotros</a>
+            <a href="about.html">Sobre Nosotros</a>
         </ul>
         <ul>
             <a href="#">Cookies</a>
         </ul>
         <ul>
-            <a href="#">Iniciar Sesión</a>
+            <a href="iniciodesesion.html">Iniciar Sesión</a>
         </ul>
         <ul>
-            <a href="#">Regístrate</a>
+            <a href="registro.html">Regístrate</a>
         </ul>
     </div>
     <div class="Tittle">
         <h1>¡¡Bienvenido a MMA Mobile!!</h1>
     </div>
-    <div class="Cuerpo">
-        <h1>Productos</h1>
+        <div class="product-set">
+        <div class="product">
+            <div class="product-header">
+                <h3>IPhone 17 Pro</h3>
+            </div>
+            <div class="product-body">
+                <img src="https://static.k-tuin.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-17-pro-naranja-cosmico-5.jpg" height="200">
+            </div>
+            <div class="product-footer">
+                <h4>$799.00</h4>
+            </div>
+        </div>
+        
+        <div class="product">
+            <div class="product-header">
+                <h3>Tarjeta 2</h3>
+            </div>
+            <div class="product-body">
+                <p>Contenido de la segunda tarjeta. Este texto es un poco más extenso para demostrar que todas las tarjetas mantienen la misma altura independientemente del contenido.</p>
+                <p>Segundo párrafo para añadir más contenido.</p>
+            </div>
+            <div class="product-footer">
+                <h4>Pie 2</h4>
+            </div>
+        </div>
+        
+        <div class="product">
+            <div class="product-header">
+                <h3>Tarjeta 3</h3>
+            </div>
+            <div class="product-body">
+                <p>Contenido de la tercera tarjeta. Este es el texto más corto de todos.</p>
+            </div>
+            <div class="product-footer">
+                <h4>Pie 3</h4>
+            </div>
+        </div>
+        
+        <div class="product">
+            <div class="product-header">
+                <h3>Tarjeta 4</h3>
+            </div>
+            <div class="product-body">
+                <p>Contenido de la cuarta tarjeta. Este texto tiene una longitud media, similar al de la primera tarjeta.</p>
+                <p>Incluimos un segundo párrafo para completar el contenido.</p>
+            </div>
+            <div class="product-footer">
+                <h4>Pie 4</h4>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
