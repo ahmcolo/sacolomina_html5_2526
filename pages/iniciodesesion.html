@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Tienda Móviles</title>
+    <style>
+        .header {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 0;
+            text-align: right;
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .header ul {
+            margin: 0 15px;
+            padding: 0;
+        }
+        
+        .header ul a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+        
+        .header ul a:hover {
+            text-decoration: underline;
+        }
+       
+        body {
+            font-family: Arial;
+            background-color: #2ecc71;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .contenedor {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+        
+        h1 {
+            color: #27ae60;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .campo {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        input:focus {
+            border-color: #27ae60;
+            outline: none;
+        }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #219955;
+        }
+        
+        .enlace {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .enlace a {
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+       
+        
+        .recordar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .recordar input {
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .recordar label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <a href="#">Privacidad</a>
+        </ul>
+        <ul>
+            <a href="about.html">Sobre Nosotros</a>
+        </ul>
+        <ul>
+            <a href="#">Cookies</a>
+        </ul>
+        <ul>
+            <a href="#">Iniciar Sesión</a>
+        </ul>
+        <ul>
+            <a href="Pagina_principal.html">Home</a>
+        </ul>
+    </div>   
+    
+    <div class="contenedor">
+        <h1>MMA Mobile</h1>
+        
+        <form action="Pagina_principal.html" method="get">
+            <div class="campo">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" placeholder="tucorreo@gmail.com">
+            </div>
+            
+            <div class="campo">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" placeholder="Tu contraseña">
+            </div>
+            
+            <div class="recordar">
+                <input type="checkbox" id="recordar">
+                <label for="recordar">Recordar mi cuenta</label>
+            </div>
+            
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        
+        <div class="enlace">
+            ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+        </div>
+    </div>
+</body>
+</html>
