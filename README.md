@@ -1,4 +1,10 @@
 # sacolomina_html5_2526
+
+# Site
+Visit the site at: 
+
+https://ahmcolo.github.io/sacolomina_html5_2526/
+
 # Description
 This project is a simple HTML5 mini store that allows users to browse and simulate a fake purchase products online. It features a user-friendly interface, a responsive design, and a secure payment system.
 
