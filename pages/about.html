@@ -35,6 +35,92 @@
         </style>
     </head>
     <body>
+        <style>
+        @media (max-width: 576px) {  
+/* Estilo básico del contenedor */
+.menu-container { position: relative; padding: 20px; }
+
+/* Ocultar el checkbox real */
+#menu-toggle { display: none; }
+
+/* Diseño de las tres líneas (Icono Hamburguesa) */
+.hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  gap: 5px;
+}
+
+.hamburger span {
+  background: #333;
+  height: 4px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Estilo de la lista desplegable (Oculta por defecto) */
+.menu-list {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 60px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  
+}
+
+/* Mostrar menú cuando el checkbox está seleccionado */
+#menu-toggle:checked ~ .menu-list {
+  display: block;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+.header{
+    display: none;
+    visibility: hidden;
+}
+/* Animación opcional: convertir las líneas en X al abrir */
+#menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+#menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+#menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(7px, -8px); }
+        }
+        @media (min-width: 576px) {  
+.menu-container {
+    display: none;
+    visibility: hidden;
+}
+        }
+</style>
+
+
+  <nav class="menu-container">
+  <!-- Checkbox invisible que controla el estado -->
+  <input type="checkbox" id="menu-toggle" />
+  
+  <!-- Icono de las tres líneas -->
+  <label for="menu-toggle" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <!-- Lista de opciones del menú -->
+  <ul class="menu-list">
+    <li><a href="iniciodesesion.html">Iniciar sesion</a></li>
+    <li><a href="Pagina_principal.html">Home</a></li>
+    <li><a href="Privacidad">Privacidad</a></li>
+    <li><a href="Cookies">Cookies</a></li>
+    <li><a href="About">About</a></li>
+    
+  </ul>
+</nav>
+
         <div class="header">
             <ul>
                 <a href="#">Privacidad</a>
