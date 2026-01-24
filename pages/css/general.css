@@ -172,6 +172,7 @@ body {
         display: none;
         visibility: hidden;
     }
+    /* aplicar cuando el pie es alto por poco contenido 
     footer {
                 background-color: #27ae60;
                 padding: 10px 0;
@@ -184,6 +185,7 @@ body {
                 position: absolute;
                 bottom: 0;
             } 
+    */
 }
 
 footer {
