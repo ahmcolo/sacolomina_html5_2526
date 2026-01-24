@@ -5,228 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MMA Mobile</title>
-    <link rel="icon" href="/content/logoMMAmobile.png">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: rgb(189, 255, 189);
-        }
-
-        .header {
-            background-color: #27ae60;
-            color: white;
-            padding: 10px 0;
-            text-align: right;
-        }
-
-        .header ul {
-            display: inline;
-            list-style-type: none;
-            margin: 0 15px;
-            padding: 0;
-        }
-
-        .header ul a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .Tittle {
-            text-align: center;
-            margin: 50px 0;
-        }
-
-        .product-set {
-            display: flex;
-            gap: 20px;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .product {
-            background-color: white;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            min-width: 0;
-        }
-
-        .product-header {
-            background-color: #27ae60;
-            color: black;
-            height: 40px;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .product-body {
-            flex: 1;
-        }
-
-        img {
-            display: flex;
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .product:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-footer {
-            background-color: #27ae60;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .product-footer h4 {
-            color: black;
-            font-size: 14px;
-        }
-
-        @media (max-width: 576px) {
-
-            .menu-container {
-                position: relative;
-                padding: 20px;
-            }
-
-
-            #menu-toggle {
-                display: none;
-            }
-
-            .product-set {
-                flex-wrap: wrap;
-            }
-
-            .product {
-                flex: 0 0 calc(50% - 10px);
-                margin-bottom: 20px;
-            }
-
-            .hamburger {
-                cursor: pointer;
-                display: flex;
-                flex-direction: column;
-                width: 30px;
-                gap: 5px;
-            }
-
-            .hamburger span {
-                background: #333;
-                height: 4px;
-                border-radius: 2px;
-                transition: 0.3s;
-            }
-
-            .menu-list {
-                display: none;
-                list-style: none;
-                position: absolute;
-                top: 60px;
-                background: white;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                padding: 10px;
-
-            }
-
-            #menu-toggle:checked~.menu-list {
-                display: block;
-            }
-
-            a {
-                text-decoration: none;
-                color: black;
-                padding: 10px;
-                display: block;
-            }
-
-            .header {
-                display: none;
-                visibility: hidden;
-            }
-
-            #menu-toggle:checked~.hamburger span:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-
-            #menu-toggle:checked~.hamburger span:nth-child(2) {
-                opacity: 0;
-            }
-
-            #menu-toggle:checked~.hamburger span:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -8px);
-            }
-        }
-
-        @media (min-width: 576px) {
-            .menu-container {
-                display: none;
-                visibility: hidden;
-            }
-
-        }
-    </style>
+    <link rel="icon" href="https://raw.githubusercontent.com/ahmcolo/sacolomina_html5_2526/refs/heads/main/content/logoMMAmobile.png">
+    <link rel="stylesheet" href="pages/css/general.css">
+    <link rel="stylesheet" href="pages/css/style.css">
 </head>
 
 <body>
     <nav class="menu-container">
+        <!-- Checkbox invisible que controla el estado -->
         <input type="checkbox" id="menu-toggle" />
+
+        <!-- Icono de las tres líneas -->
         <label for="menu-toggle" class="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </label>
+
+        <!-- Lista de opciones del menú -->
         <ul class="menu-list">
-            <li><a href="iniciodesesion.html">Iniciar sesion</a></li>
-            <li><a href="Pagina_principal.html">Home</a></li>
-            <li><a href="Privacidad">Privacidad</a></li>
-            <li><a href="Cookies">Cookies</a></li>
-            <li><a href="pages/about.html">About</a></li>
+            <hr>
+            <li><a href="pages/pagina.html">Home</a></li>
+            <hr>
+            <li><a href="/index.html">Tienda</a></li>
+            <hr>
+            <li><a href="pages/about.html">Nosotros</a></li>
+            <hr>
         </ul>
+        <a href="pages/pagina.html" id="MMAmobile"> MMA Mobile </a>
+        <a href="pages/iniciodesesion.html" id="iniciasesionMovil"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg></a> <!-- Copiar y pegar de google en https://fonts.google.com/icons?selected=Material+Symbols+Outlined:login:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=31&icon.color=%23e3e3e3&icon.query=login -->
     </nav>
 
     <div class="header">
         <ul>
-            <a href="#">Privacidad</a>
+            <a href="pages/pagina.html" id="MMAmobile"> MMA Mobile </a>
         </ul>
         <ul>
-            <a href="pages/about.html">Sobre Nosotros</a>
+            <a href="/index.html"> Tienda </a>
         </ul>
         <ul>
-            <a href="#">Cookies</a>
+            <a href="pages/about.html">Nosotros</a>
         </ul>
         <ul>
-            <a href="iniciodesesion.html">Iniciar Sesión</a>
-        </ul>
-        <ul>
-            <a href="registro.html">Regístrate</a>
+            <a href="pages/iniciodesesion.html">Iniciar Sesión</a>
         </ul>
     </div>
-    <div class="Tittle">
-        <h1>¡¡Bienvenido a MMA Mobile!!</h1>
-    </div>
+        <h1 style="text-align: center; ">Tienda MMA Mobile</h1>
     <div class="product-set">
         <div class="product">
             <div class="product-header">
-                <h3>IPhone 17 Pro</h3>
+                <h3>iPhone 17 Pro</h3>
             </div>
             <div class="product-body">
                 <img
-                    src="https://static.k-tuin.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-17-pro-naranja-cosmico-5.jpg">
+                    src="https://static.k-tuin.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-17-pro-naranja-cosmico-5.jpg" alt="iPhone 17 Pro">
+                    <a href="https://www.apple.com/es/shop/buy-iphone/iphone-17-pro"
+                    target="_blank"
+                    class="buy-button">
+                    Comprar
+                    </a>
             </div>
             <div class="product-footer">
-                <h4>799,00€</h4>
+                <h4>1319,00€</h4>
             </div>
         </div>
 
@@ -235,38 +75,62 @@
                 <h3>Samsung Galaxy S25 Ultra</h3>
             </div>
             <div class="product-body">
-                <img src="https://media.ldlc.com/r1600/ld/products/00/06/20/63/LD0006206303.jpg">
+                <img src="https://media.ldlc.com/r1600/ld/products/00/06/20/63/LD0006206303.jpg" alt="Samsung Galaxy S25 Ultra">
+                <a href="https://www.samsung.com/es/smartphones/galaxy-s25-ultra/buy/"
+                target="_blank"
+                class="buy-button">
+                Comprar
+                </a>
             </div>
             <div class="product-footer">
-                <h4>1299,00€</h4>
+                <h4>1389,00€</h4>
             </div>
         </div>
-
+        
         <div class="product">
+            
             <div class="product-header">
                 <h3>Xiaomi 15 Ultra 5G</h3>
             </div>
             <div class="product-body">
-                <img src="https://storage.comprasmartphone.com/smartphones/xiaomi-15-ultra.png">
+                <img src="https://i05.appmifile.com/192_item_es/25/02/2025/df1f81abcd62cc52ecb90314670935df.png?thumb=1&f=webp&q=85" alt="Xiaomi 15 Ultra 5G">
+                <a href="https://www.mi.com/es/product/xiaomi-15-ultra/buy/?gid=4223708441"
+                target="_blank"
+                class="buy-button">
+                Comprar
+                </a>
             </div>
             <div class="product-footer">
                 <h4>1499,00€</h4>
             </div>
+            
         </div>
-
+            
         <div class="product">
             <div class="product-header">
                 <h3>REDMAGIC 11 Pro</h3>
             </div>
             <div class="product-body">
-                <img src="https://m.media-amazon.com/images/I/71Nky3zyy0L.jpg">
+                <img src="https://eu.redmagic.gg/cdn/shop/files/Black-07_4d1a76d6-cb80-40af-a46a-2d279b89f095_1750x.png?v=1764236372" alt="REDMAGIC 11 Pro">
+                <a href="https://eu.redmagic.gg/products/redmagic-11-pro?variant=52344049926511"
+                target="_blank"
+                class="buy-button">
+                Comprar
+                </a>
             </div>
             <div class="product-footer">
-                <h4>839,00€</h4>
+                <h4>1118,70€</h4>
             </div>
         </div>
     </div>
-
+    <footer>
+        <div class="footer-content">
+            <a href="pages/privacidad.html">Política de Privacidad</a>
+            <a href="pages/cookies.html">Política de Cookies</a>
+            <a href="pages/terminos.html">Términos de Servicio</a>
+            <a href="pages/aviso.html">Aviso legal</a>
+        </div>
+    </footer>
 </body>
 
 </html>

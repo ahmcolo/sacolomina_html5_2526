@@ -7,6 +7,33 @@
     <title>MMA Mobile</title>
     <link rel="icon" href="https://raw.githubusercontent.com/ahmcolo/sacolomina_html5_2526/refs/heads/main/content/logoMMAmobile.png">
     <link rel="stylesheet" href="css/general.css">
+    <style>
+        .imgPartners {
+            display: flex;       /* Alinea las imágenes en línea */
+            align-items: center; /* Las centra verticalmente entre sí */
+            gap: 20px;           /* Espacio entre cada logo */
+            flex-wrap: wrap;     /* Permite que bajen de línea si no caben en móviles */
+        }
+        .imgPartners img {
+            height: 50px;        /* Controla el tamaño (ajusta según prefieras) */
+            width: auto;         /* Mantiene la proporción original */
+            object-fit: contain; /* Evita que las imágenes se deformen */
+        } 
+        @media (min-width: 576px) {
+            footer {
+                background-color: #27ae60;
+                padding: 10px 0;
+                padding-bottom: 20px;
+                text-align: center;
+                border-top: 1px solid #46984b;
+                margin-top: 40px;
+                width: 100%;
+                display: block;
+                position: absolute;
+                bottom: 0;
+            }    
+        }
+    </style>
 </head>
 
 <body>
@@ -50,11 +77,36 @@
             <a href="iniciodesesion.html">Iniciar Sesión</a>
         </ul>
     </div>
-    <div class="Tittle">
-        <h1>Titulo</h1>
+    <div class="MMAmobile">
+        <h1>MMA MOBILE</h1>
     </div>
     <div class="Cuerpo">
-        <h1>Cuerpo</h1>
+        <h1>Bienvenidos,</h1>
+        
+            <h2>Descubre lo último en tecnología móvil</h2>
+            <p>
+                En <strong>MMA Mobile</strong> reunimos los smartphones más avanzados de nuestros 
+                <strong>partners oficiales</strong>, para que puedas consultar en un solo lugar 
+                los modelos más recientes del mercado.
+            </p>
+        
+            <p>
+                Aquí siempre encontrarás <strong>lo último de lo último</strong>, desde los nuevos lanzamientos 
+                hasta los dispositivos más potentes del momento.
+            </p>
+        
+            <p>
+                Actualizamos constantemente nuestro catálogo para que no te pierdas ninguna novedad. 
+                Vuelve, actualiza y observa cómo evoluciona la tecnología móvil con <strong>MMA Mobile</strong>.
+            </p>
+        
+            <h3>Nuestros partners tecnológicos</h3>
+            <div class="imgPartners">
+                <img src="https://www.freepnglogos.com/uploads/apple-logo-png/file-apple-logo-black-svg-wikimedia-commons-1.png" alt="LogoApple"> 
+                <img src="https://www.freepnglogos.com/uploads/classic-black-samsung-logo-png-28.png" alt="LogoSamsung"> 
+                <img src="https://www.freepnglogos.com/uploads/xiaomi-png/xiaomi-svg-png-icon-download-12.png" alt="LogoXiaomi"> 
+                <img src="https://cdn.pushowl.com/images/tr:cm-pad_resize,w-192,h-192,bg-FFFFFF00/redmagic-gaming/default-c800d852-82d5-401e-a05c-d63998bb2408-100-100.png?ik-s=0ae2d42a98129364f8a6dd004ddb99682402e9b6" alt="LogoRedMagic" style="filter: brightness(0);">
+            </div>
     </div>
     <footer>
         <div class="footer-content">
