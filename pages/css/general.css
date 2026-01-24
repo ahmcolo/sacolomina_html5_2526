@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(189, 255, 189);
+    /* Add these for sticky footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensures body takes full viewport height */
+}
+
+
+.header {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 0;
+    text-align: right;
+    border-bottom: 1px solid #46984b;
+}
+
+#MMAmobile {
+    float: left;
+    margin: 0 15px;
+    padding-bottom: 0px;
+    font-family: DM Serif Text;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+}
+
+.header ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0 15px;
+    padding: 0;
+}
+
+.header ul a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header ul a:hover {
+    text-decoration: underline;
+}
+
+.Tittle {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.Cuerpo {
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+@media (max-width: 576px) {
+
+    /* Estilo básico del contenedor */
+    .menu-container {
+        position: relative;
+        padding: 20px;
+        background-color: #27ae60;
+    }
+
+    #MMAmobile {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        margin: 0px;
+        transform: translateX(-50%); /* Centers the text by shifting it left by half its width */
+        font-weight: bold;
+        color: white;
+        font-family: DM Serif Text;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        border-left: none;
+        border-right: none;
+        padding: 0px;
+    }
+
+    #iniciasesionMovil {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        margin: 0px;
+        margin-right: 10px;
+        font-weight: bold;
+        color: white;
+        padding: 0px;
+    }
+
+    /* Ocultar el checkbox real */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Diseño de las tres líneas (Icono Hamburguesa) */
+    .hamburger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        gap: 5px;
+    }
+
+    .hamburger span {
+        background: #333;
+        height: 4px;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    /* Estilo de la lista desplegable (Oculta por defecto) */
+    .menu-list {
+        display: none;
+        list-style: none;
+        position: absolute;
+        top: 46px;
+        background: #27ae60;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+
+    }
+
+    /* Mostrar menú cuando el checkbox está seleccionado */
+    #menu-toggle:checked~.menu-list {
+        display: block;
+        border-top: 1px dashed #46984b;
+        border-bottom: 1px solid #46984b;
+        border-left: 1px solid #46984b;
+        border-right: 1px solid #46984b;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        padding: 8px;
+        display: block;
+    }
+
+    .header {
+        display: none;
+        visibility: hidden;
+    }
+
+    hr {
+        border: 0;
+        border: 0.5px solid #000000;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* Animación : convertir las líneas en X al abrir */
+    #menu-toggle:checked~.hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #menu-toggle:checked~.hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked~.hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
+}
+
+@media (min-width: 576px) {
+    .menu-container {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+footer {
+    background-color: #27ae60;
+    padding: 10px 0;
+    padding-bottom: 20px;
+    text-align: center;
+    border-top: 1px solid #46984b;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.footer-content a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}

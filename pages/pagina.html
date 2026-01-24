@@ -1,182 +1,69 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MMA Mobile</title>
-        <link rel="icon" href="/content/logoMMAmobile.png">
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                background-color: rgb(189, 255, 189);
-            }
-            .header {
-                background-color: #27ae60;
-                color: white;
-                padding: 10px 0;
-                text-align: right;
-            }
-            .header ul {
-                display: inline;
-                list-style-type: none;
-                margin: 0 15px;
-                padding: 0;
-            }
-            .header ul a {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-            }
-            .header ul a:hover {
-            text-decoration: underline;
-            }
-            .Tittle {
-                text-align: center;
-                margin: 50px 0;
-            }
-        </style>
-    </head>
-    <body>
-        <style>
-        @media (max-width: 576px) {  
-/* Estilo básico del contenedor */
-.menu-container { position: relative; padding: 20px; }
 
-/* Ocultar el checkbox real */
-#menu-toggle { display: none; }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MMA Mobile</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/ahmcolo/sacolomina_html5_2526/refs/heads/main/content/logoMMAmobile.png">
+    <link rel="stylesheet" href="css/general.css">
+</head>
 
-/* Diseño de las tres líneas (Icono Hamburguesa) */
-.hamburger {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  width: 30px;
-  gap: 5px;
-}
+<body>
 
-.hamburger span {
-  background: #333;
-  height: 4px;
-  border-radius: 2px;
-  transition: 0.3s;
-}
+    <nav class="menu-container">
+        <!-- Checkbox invisible que controla el estado -->
+        <input type="checkbox" id="menu-toggle" />
 
-/* Estilo de la lista desplegable (Oculta por defecto) */
-.menu-list {
-  display: none;
-  list-style: none;
-  position: absolute;
-  top: 60px;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  padding: 10px;
-  
-}
+        <!-- Icono de las tres líneas -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-/* Mostrar menú cuando el checkbox está seleccionado */
-#menu-toggle:checked ~ .menu-list {
-  display: block;
-}
-a{
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    display: block;
-}
-.header{
-    display: none;
-    visibility: hidden;
-}
-hr {
-    border: 0;                /* Remove default browser borders */
-    border-top: 1px solid #eee; /* Create a subtle light-grey line */
-    margin: 1px 0; 
-}
-/* Animación opcional: convertir las líneas en X al abrir */
-#menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-#menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
-#menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(7px, -8px); }
-        }
-        @media (min-width: 576px) {  
-.menu-container {
-    display: none;
-    visibility: hidden;
-}
-        }
-        footer {
-  background-color: #27ae60;
-  padding: 20px 0;
-  text-align: center;
-  border-top: 1px solid #46984b;
-  margin-top: 40px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+        <!-- Lista de opciones del menú -->
+        <ul class="menu-list">
+            <hr>
+            <li><a href="pagina.html">Home</a></li>
+            <hr>
+            <li><a href="/index.html">Tienda</a></li>
+            <hr>
+            <li><a href="about.html">Nosotros</a></li>
+            <hr>
+        </ul>
+        <a href="pagina.html" id="MMAmobile"> MMA Mobile </a>
+        <a href="iniciodesesion.html" id="iniciasesionMovil"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg></a> <!-- Copiar y pegar de google en https://fonts.google.com/icons?selected=Material+Symbols+Outlined:login:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=31&icon.color=%23e3e3e3&icon.query=login -->
+    </nav>
 
-.footer-content a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #007bff;
-  font-size: 14px;
-}
-
-.footer-content a:hover {
-  text-decoration: underline;
-}
-</style>
-
-
-  <nav class="menu-container">
-  <!-- Checkbox invisible que controla el estado -->
-  <input type="checkbox" id="menu-toggle" />
-  
-  <!-- Icono de las tres líneas -->
-  <label for="menu-toggle" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-  <!-- Lista de opciones del menú -->
-  <ul class="menu-list">
-    <li><a href="iniciodesesion.html">Iniciar sesion</a></li>
-    <hr>
-    <li><a href="Pagina_principal.html">Home</a></li>
-    <hr>
-    <li><a href="Privacidad">Privacidad</a></li>
-    <hr>
-    <li><a href="Cookies">Cookies</a></li>
-    <hr>
-    <li><a href="About">About</a></li>
-    <hr>
-  </ul>
-</nav>
-
-        <div class="header">
-            <ul>
-                <a href="pagina.html">Pagina Principal</a>
-            </ul>
-            <ul>
-                <a href="about.html">Sobre Nosotros</a>
-            </ul>
-            <ul>
-                <a href="iniciodesesion.html">Iniciar Sesión</a>
-            </ul>
+    <div class="header">
+        <ul>
+            <a href="pagina.html" id="MMAmobile"> MMA Mobile </a>
+        </ul>
+        <ul>
+            <a href="/index.html"> Tienda </a>
+        </ul>
+        <ul>
+            <a href="about.html">Nosotros</a>
+        </ul>
+        <ul>
+            <a href="iniciodesesion.html">Iniciar Sesión</a>
+        </ul>
+    </div>
+    <div class="Tittle">
+        <h1>Titulo</h1>
+    </div>
+    <div class="Cuerpo">
+        <h1>Cuerpo</h1>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <a href="privacidad.html">Política de Privacidad</a>
+            <a href="cookies.html">Política de Cookies</a>
+            <a href="terminos.html">Términos de Servicio</a>
+            <a href="aviso.html">Aviso legal</a>
         </div>
-        <div class="Tittle">
-            <h1>¡¡Bienvenido a MMA Mobile!!</h1>
-        </div>
-        <div class="Cuerpo">
-            <h1>Productos</h1>
-        </div>
-        <footer>
-            <div class="footer-content">
-                <a href="/privacy">Política de Privacidad</a> 
-                <a href="/cookies">Política de Cookies</a> 
-                <a href="/terms">Términos de Servicio</a>
-            </div>
-        </footer>
-    </body>
+    </footer>
+</body>
+
 </html>

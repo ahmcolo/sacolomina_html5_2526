@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>MMA Mobile Registro</title>
-    <link rel="icon" href="/content/logoMMAmobile.png">
+    <title>Login MMA Mobile </title>
+    <link rel="icon"
+        href="https://raw.githubusercontent.com/ahmcolo/sacolomina_html5_2526/refs/heads/main/content/logoMMAmobile.png">
+    <link rel="stylesheet" href="css/general.css">
     <style>
         .header {
             background-color: #27ae60;
             color: white;
             padding: 10px 0;
-            text-align: right;
-            display: flex;
             position: fixed;
             top: 0;
             width: 100%;
-            justify-content: flex-end;
-            align-items: center;
-            z-index: 1000;
+            /* Removed display: flex, justify-content, and align-items to allow floats */
         }
         
-        .header ul {
-            margin: 0 15px;
-            padding: 0;
+        @media (max-width: 576px) {
+            .menu-container {
+                position: absolute;
+                width: 100%;
+                top: 0px;
+                padding: 20px;
+                background-color: #27ae60;
+            }
+            #MMAmobile {
+                margin: 0px;
+            }
         }
-        
-        .header ul a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 5px 10px;
-        }
-        
-        .header ul a:hover {
-            text-decoration: underline;
-        }
-        
         body {
             font-family: Arial;
-            background-color: #2ecc71;
             margin: 0;
             padding: 0;
             display: flex;
@@ -44,33 +38,33 @@
             align-items: center;
             min-height: 100vh;
         }
-        
+
         .contenedor {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 350px;
             margin-top: 60px;
         }
-        
+
         h1 {
             color: #27ae60;
             text-align: center;
             margin-bottom: 25px;
         }
-        
+
         .campo {
             margin-bottom: 20px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 8px;
             color: #333;
             font-weight: bold;
         }
-        
+
         input {
             width: 100%;
             padding: 10px;
@@ -79,8 +73,8 @@
             box-sizing: border-box;
             font-size: 16px;
         }
-        
-        
+
+
         button {
             width: 100%;
             padding: 12px;
@@ -93,72 +87,112 @@
             font-weight: bold;
             margin-top: 10px;
         }
-        
-      
+
+
         .enlace {
             text-align: center;
             margin-top: 25px;
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
-        
+
         .enlace a {
             color: #27ae60;
             text-decoration: none;
             font-weight: bold;
         }
-        
     </style>
 </head>
+
 <body>
+    <nav class="menu-container">
+        <!-- Checkbox invisible que controla el estado -->
+        <input type="checkbox" id="menu-toggle" />
+
+        <!-- Icono de las tres líneas -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Lista de opciones del menú -->
+        <ul class="menu-list">
+            <hr>
+            <li><a href="pagina.html">Home</a></li>
+            <hr>
+            <li><a href="/index.html">Tienda</a></li>
+            <hr>
+            <li><a href="about.html">Nosotros</a></li>
+            <hr>
+        </ul>
+        <a href="pagina.html" id="MMAmobile"> MMA Mobile </a>
+        <a href="iniciodesesion.html" id="iniciasesionMovil"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path
+                    d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z" />
+            </svg></a>
+        <!-- Copiar y pegar de google en https://fonts.google.com/icons?selected=Material+Symbols+Outlined:login:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=31&icon.color=%23e3e3e3&icon.query=login -->
+    </nav>
+
     <div class="header">
         <ul>
-            <a href="#">Privacidad</a>
+            <a href="pagina.html" id="MMAmobile"> MMA Mobile </a>
         </ul>
         <ul>
-            <a href="about.html">Sobre Nosotros</a>
+            <a href="/index.html"> Tienda </a>
         </ul>
         <ul>
-            <a href="#">Cookies</a>
+            <a href="about.html">Nosotros</a>
         </ul>
         <ul>
             <a href="iniciodesesion.html">Iniciar Sesión</a>
         </ul>
-        <ul>
-            <a href="Pagina_principal.html">Home</a>
-        </ul>
     </div>
-   
+
     <div class="contenedor">
         <h1>Crear Cuenta</h1>
-        
+
         <form action="iniciodesesion.html" method="get">
             <div class="campo">
                 <label for="nombre">Nombre completo:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
             </div>
-            
+
             <div class="campo">
                 <label for="email">Correo electrónico:</label>
                 <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required>
             </div>
-            
+
             <div class="campo">
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required minlength="6">
+                <input type="password" id="password" name="password" placeholder="Mínimo 6 caracteres" required
+                    minlength="6">
             </div>
-            
+
             <div class="campo">
                 <label for="password2">Repetir contraseña:</label>
-                <input type="password" id="password2" name="password2" placeholder="Vuelve a escribirla" required minlength="6">
+                <input type="password" id="password2" name="password2" placeholder="Vuelve a escribirla" required
+                    minlength="6">
             </div>
-            
+
             <button type="submit">Registrarse</button>
         </form>
-        
+
         <div class="enlace">
             ¿Ya tienes cuenta? <a href="iniciodesesion.html">Inicia sesión aquí</a>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <a href="privacidad.html">Política de Privacidad</a>
+            <a href="cookies.html">Política de Cookies</a>
+            <a href="terminos.html">Términos de Servicio</a>
+            <a href="aviso.html">Aviso legal</a>
+        </div>
+    </footer>
+
 </body>
+
 </html>

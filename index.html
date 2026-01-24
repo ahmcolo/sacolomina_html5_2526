@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,34 +12,39 @@
             padding: 0;
             background-color: rgb(189, 255, 189);
         }
+
         .header {
             background-color: #27ae60;
             color: white;
             padding: 10px 0;
             text-align: right;
         }
+
         .header ul {
             display: inline;
             list-style-type: none;
             margin: 0 15px;
             padding: 0;
         }
+
         .header ul a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
+
         .Tittle {
             text-align: center;
             margin: 50px 0;
         }
+
         .product-set {
             display: flex;
             gap: 20px;
             justify-content: space-between;
             padding: 20px;
         }
-        
+
         .product {
             background-color: white;
             overflow: hidden;
@@ -47,7 +53,7 @@
             flex: 1;
             min-width: 0;
         }
-        
+
         .product-header {
             background-color: #27ae60;
             color: black;
@@ -57,21 +63,23 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .product-body {
             flex: 1;
         }
-        img{
+
+        img {
             display: flex;
             position: relative;
             width: 100%;
             height: 100%;
         }
-        .product:hover{
+
+        .product:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
-        
+
         .product-footer {
             background-color: #27ae60;
             height: 30px;
@@ -79,96 +87,115 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .product-footer h4 {
             color: black;
             font-size: 14px;
         }
-@media (max-width: 576px) {  
 
-.menu-container { position: relative; padding: 20px; }
+        @media (max-width: 576px) {
+
+            .menu-container {
+                position: relative;
+                padding: 20px;
+            }
 
 
-#menu-toggle { display: none; }
+            #menu-toggle {
+                display: none;
+            }
 
-.product-set {
+            .product-set {
                 flex-wrap: wrap;
             }
-            
+
             .product {
                 flex: 0 0 calc(50% - 10px);
                 margin-bottom: 20px;
             }
 
-.hamburger {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  width: 30px;
-  gap: 5px;
-}
+            .hamburger {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                width: 30px;
+                gap: 5px;
+            }
 
-.hamburger span {
-  background: #333;
-  height: 4px;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-.menu-list {
-  display: none;
-  list-style: none;
-  position: absolute;
-  top: 60px;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  padding: 10px;
-  
-}
-#menu-toggle:checked ~ .menu-list {
-  display: block;
-}
-a{
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    display: block;
-}
-.header{
-    display: none;
-    visibility: hidden;
-}
+            .hamburger span {
+                background: #333;
+                height: 4px;
+                border-radius: 2px;
+                transition: 0.3s;
+            }
 
-#menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-#menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
-#menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(7px, -8px); }
+            .menu-list {
+                display: none;
+                list-style: none;
+                position: absolute;
+                top: 60px;
+                background: white;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                padding: 10px;
+
+            }
+
+            #menu-toggle:checked~.menu-list {
+                display: block;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                padding: 10px;
+                display: block;
+            }
+
+            .header {
+                display: none;
+                visibility: hidden;
+            }
+
+            #menu-toggle:checked~.hamburger span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            #menu-toggle:checked~.hamburger span:nth-child(2) {
+                opacity: 0;
+            }
+
+            #menu-toggle:checked~.hamburger span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -8px);
+            }
         }
-        
-        @media (min-width: 576px) {  
-.menu-container {
-    display: none;
-    visibility: hidden;
-}
+
+        @media (min-width: 576px) {
+            .menu-container {
+                display: none;
+                visibility: hidden;
+            }
 
         }
     </style>
 </head>
+
 <body>
     <nav class="menu-container">
-  <input type="checkbox" id="menu-toggle" />
-  <label for="menu-toggle" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-  <ul class="menu-list">
-    <li><a href="iniciodesesion.html">Iniciar sesion</a></li>
-    <li><a href="Pagina_principal.html">Home</a></li>
-    <li><a href="Privacidad">Privacidad</a></li>
-    <li><a href="Cookies">Cookies</a></li>
-    <li><a href="pages/about.html">About</a></li>   
-  </ul>
-</nav>
-    
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="menu-list">
+            <li><a href="iniciodesesion.html">Iniciar sesion</a></li>
+            <li><a href="Pagina_principal.html">Home</a></li>
+            <li><a href="Privacidad">Privacidad</a></li>
+            <li><a href="Cookies">Cookies</a></li>
+            <li><a href="pages/about.html">About</a></li>
+        </ul>
+    </nav>
+
     <div class="header">
         <ul>
             <a href="#">Privacidad</a>
@@ -189,19 +216,20 @@ a{
     <div class="Tittle">
         <h1>¡¡Bienvenido a MMA Mobile!!</h1>
     </div>
-        <div class="product-set">
+    <div class="product-set">
         <div class="product">
             <div class="product-header">
                 <h3>IPhone 17 Pro</h3>
             </div>
             <div class="product-body">
-                <img src="https://static.k-tuin.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-17-pro-naranja-cosmico-5.jpg">
+                <img
+                    src="https://static.k-tuin.com/media/catalog/product/cache/1/image/0dc2d03fe217f8c83829496872af24a0/i/p/iphone-17-pro-naranja-cosmico-5.jpg">
             </div>
             <div class="product-footer">
                 <h4>799,00€</h4>
             </div>
         </div>
-        
+
         <div class="product">
             <div class="product-header">
                 <h3>Samsung Galaxy S25 Ultra</h3>
@@ -213,7 +241,7 @@ a{
                 <h4>1299,00€</h4>
             </div>
         </div>
-        
+
         <div class="product">
             <div class="product-header">
                 <h3>Xiaomi 15 Ultra 5G</h3>
@@ -225,7 +253,7 @@ a{
                 <h4>1499,00€</h4>
             </div>
         </div>
-        
+
         <div class="product">
             <div class="product-header">
                 <h3>REDMAGIC 11 Pro</h3>
@@ -240,4 +268,5 @@ a{
     </div>
 
 </body>
+
 </html>
