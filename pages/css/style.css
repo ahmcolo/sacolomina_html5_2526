@@ -2,10 +2,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(189, 255, 189);
-    /* Add these for sticky footer */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;  /* Ensures body takes full viewport height */
+    display: grid;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    min-height: 100vh;
 }
 .product-set {
     display: flex;
@@ -44,11 +49,27 @@ img {
     height: 100%;
 }
 
-.product:hover {
+
+#prophone:hover {
     transform: translateY(-5px);
+    transition: transform 0.3s ease;
     box-shadow: 0 0 26px rgba(0, 255, 98);
 }
-
+#mobile:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 26px rgba(0, 255, 98);
+}
+#noobmobile:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 26px rgba(0, 255, 98);
+}
+#trymobile:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 26px rgba(0, 255, 98);
+}
 .product-footer {
     background-color: #27ae60;
     height: 30px;
@@ -61,6 +82,7 @@ img {
     color: black;
     font-size: 14px;
 }
+/*
 @media (min-width: 576px) {
     footer {
         background-color: #27ae60;
@@ -75,7 +97,7 @@ img {
         bottom: 0;
     }    
 }
-
+*/
 .product-body {
     display: flex;
     flex-direction: column;
@@ -113,3 +135,37 @@ img {
         margin-bottom: 20px;
     }
   }
+.header {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+footer {
+    grid-area: footer;
+}
+
+@media (max-width: 576px) {
+    body {
+        display: block;
+        grid-template-areas: none;
+        grid-template-columns: none;
+        grid-template-rows: none;
+    }
+
+    .header {
+        display: none;
+    }
+
+    .menu-container {
+        grid-area: header;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}
