@@ -26,6 +26,8 @@ body {
     flex-direction: column;
     flex: 1;
     min-width: 0;
+    border: #46984b 1px solid;
+    border-radius: 7px;
 }
 
 .product-header {
@@ -37,7 +39,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.product-header h3 {
+    padding: 5px;
+}
 .product-body {
     flex: 1;
 }
@@ -103,28 +107,57 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-  }
-  
-  .buy-button {
-    display: none;
-  }
-  
-  .buy-button:hover {
-    background-color: #333;
-    transform: translateY(-1px);
-  }
+    position: relative;
+}
 
-  .product:hover .buy-button {
-    display: inline-block;
+.buy-button {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     padding: 10px 22px;
-    margin-bottom: 5px;
+    border: 2px solid #46984b;
     background-color: #27ae60;
-    color: #fff;
+    color: #b9fcb7;
     text-decoration: none;
     font-weight: 600;
     border-radius: 6px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-  }
+}
+@keyframes reboteSubida {
+    0% {
+        transform: translateY(0);
+    }
+    60% {
+        transform: translateY(-5px); /* Sube al punto máximo */
+        transform: rotate(-3deg);
+    }
+    70% {
+        transform: translateY(-10px);  
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: translateY(1px);  /* Baja y se queda en la posición final */
+    }
+}
+
+.buy-button:hover {
+    /*
+    background-color: #45976e;
+    color: rgb(152, 223, 152);
+    */
+    border-radius: 8px;
+    animation: reboteSubida 0.3s ease-in-out forwards;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 10px rgb(0, 174, 255);
+}
+
+.product:hover .buy-button {
+    visibility: visible;
+    opacity: 1;
+    display: inline-block;
+}
   @media (max-width: 576px) {
     .product-set {
         flex-wrap: wrap;

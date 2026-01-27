@@ -2,11 +2,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(189, 255, 189);
-    /* Add these for sticky footer */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;  /* Ensures body takes full viewport height */
-    max-height: fit-content; 
+    display: grid;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    min-height: 100vh;
 }
 
 
@@ -19,12 +23,23 @@ body {
 }
 
 #MMAmobile {
+    text-decoration: none;
     float: left;
     margin: 0 15px;
     padding-bottom: 0px;
     font-family: DM Serif Text;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+}
+
+#MMAmobileTEXT {
+    text-decoration: none;
+    color: black;
+    font-family: DM Serif Text;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     border-left: none;
     border-right: none;
 }
@@ -208,20 +223,21 @@ footer {
 .footer-content a:hover {
     text-decoration: underline;
 }
-
-.MMAmobile { /* es un div */
+.MMAmobile a {
+    text-decoration: none;
+    color: white;
+}
+.MMAmobile { /* es un div class no id*/
     padding: 10px;
-    margin: 20px;
+    margin: 20px auto;
     background-color: #1cbe73;
     border: 1px solid #46984b;
     border-radius: 10px;
     text-align: center;
     width: 40%;
-    align-self: center;
 }
 
 .MMAmobile h1 {
-    color: white;
     font-family: DM Serif Text;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
