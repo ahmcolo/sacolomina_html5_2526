@@ -247,3 +247,113 @@ footer {
     margin: 10px auto; /* auto para centrarlo en el div */
     width: 80%;
 }
+
+/* Estilos para el FAQ Accordion */
+.faq-titulo {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #1cbe73;
+    border-bottom: 3px solid #1cbe73;
+    padding-bottom: 15px;
+}
+
+.faq-checkbox {
+    display: none;
+}
+
+.faq-container {
+    margin-bottom: 15px;
+    border: 2px solid #1cbe73;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 8px rgba(28, 190, 115, 0.15);
+    transition: all 0.3s ease;
+}
+
+.faq-container:hover {
+    box-shadow: 0 4px 12px rgba(28, 190, 115, 0.3);
+    border-color: #16a759;
+}
+
+.faq-label {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    color: #1cbe73;
+    background: linear-gradient(135deg, rgba(28, 190, 115, 0.05) 0%, rgba(28, 190, 115, 0.02) 100%);
+    transition: all 0.3s ease;
+}
+
+.faq-label:hover {
+    background: linear-gradient(135deg, rgba(28, 190, 115, 0.12) 0%, rgba(28, 190, 115, 0.08) 100%);
+}
+
+.faq-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    font-size: 14px;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #1cbe73;
+}
+
+.faq-question {
+    flex: 1;
+    font-size: 15px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 14px;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Cuando el checkbox está marcado */
+.faq-checkbox:checked + .faq-label {
+    background: linear-gradient(135deg, rgba(28, 190, 115, 0.15) 0%, rgba(28, 190, 115, 0.1) 100%);
+    color: #16a759;
+}
+
+.faq-checkbox:checked + .faq-label .faq-arrow {
+    transform: rotate(-270deg);
+    color: #16a759;
+}
+
+.faq-checkbox:checked + .faq-label .faq-question {
+    color: #16a759;
+}
+
+.faq-checkbox:checked ~ .faq-answer {
+    max-height: 500px;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
