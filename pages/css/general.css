@@ -11,6 +11,7 @@ body {
     grid-template-rows: auto 1fr auto;
     gap: 10px;
     min-height: 100vh;
+    font-family: sans-serif;
 }
 
 
@@ -20,6 +21,7 @@ body {
     padding: 10px 0;
     text-align: right;
     border-bottom: 1px solid #46984b;
+        font-family: sans-serif;
 }
 
 #MMAmobile {
@@ -32,6 +34,7 @@ body {
     border-bottom: 1px solid white;
     border-left: none;
     border-right: none;
+        font-family: sans-serif;
 }
 
 #MMAmobileTEXT {
@@ -42,6 +45,7 @@ body {
     border-bottom: 1px solid black;
     border-left: none;
     border-right: none;
+        font-family: sans-serif;
 }
 
 .header ul {
@@ -49,12 +53,14 @@ body {
     list-style-type: none;
     margin: 0 15px;
     padding: 0;
+        font-family: sans-serif;
 }
 
 .header ul a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-family: sans-serif;
 }
 
 .header ul a:hover {
@@ -64,11 +70,13 @@ body {
 .Tittle {
     text-align: center;
     margin: 50px 0;
+    font-family: sans-serif;
 }
 
 .Cuerpo {
    padding-left: 20px;
    padding-right: 20px;
+       font-family: sans-serif;
 }
 
 @media (max-width: 576px) {
@@ -88,7 +96,7 @@ body {
         transform: translateX(-50%); /* Centers the text by shifting it left by half its width */
         font-weight: bold;
         color: white;
-        font-family: DM Serif Text;
+        font-family: sans-serif;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
         border-left: none;
@@ -187,20 +195,6 @@ body {
         display: none;
         visibility: hidden;
     }
-    /* aplicar cuando el pie es alto por poco contenido 
-    footer {
-                background-color: #27ae60;
-                padding: 10px 0;
-                padding-bottom: 20px;
-                text-align: center;
-                border-top: 1px solid #46984b;
-                margin-top: 40px;
-                width: 100%;
-                display: block;
-                position: absolute;
-                bottom: 0;
-            } 
-    */
 }
 
 footer {
@@ -235,10 +229,11 @@ footer {
     border-radius: 10px;
     text-align: center;
     width: 40%;
+    font-family: sans-serif;
 }
 
 .MMAmobile h1 {
-    font-family: DM Serif Text;
+    font-family: sans-serif;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     border-left: none;

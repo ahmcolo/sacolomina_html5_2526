@@ -11,12 +11,14 @@ body {
     grid-template-rows: auto 1fr auto;
     gap: 10px;
     min-height: 100vh;
+    font-family: sans-serif;
 }
 .product-set {
     display: flex;
     gap: 20px;
     justify-content: space-between;
     padding: 20px;
+    font-family: sans-serif;
 }
 
 .product {
@@ -28,6 +30,7 @@ body {
     min-width: 0;
     border: #46984b 1px solid;
     border-radius: 7px;
+    font-family: sans-serif;
 }
 
 .product-header {
@@ -38,12 +41,15 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+    font-family: sans-serif;
 }
 .product-header h3 {
     padding: 5px;
+    font-family: sans-serif;
 }
 .product-body {
     flex: 1;
+    font-family: sans-serif;
 }
 
 img {
